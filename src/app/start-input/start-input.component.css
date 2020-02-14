@@ -1,0 +1,9 @@
+button.active {
+  /* can be pushed bright, shadows */
+  color: white;
+  background-color: rebeccapurple;
+}
+
+.hidden {
+  display: none
+}

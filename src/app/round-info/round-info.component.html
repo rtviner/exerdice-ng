@@ -1,0 +1,13 @@
+
+<div *ngIf="rounds">
+  <h2>Round</h2>
+
+  <ul class="rounds">
+    <li 
+      *ngFor="let round of rounds"
+      (click)="onSelect(round)"
+    >
+      {{round}}
+    </li>
+  </ul>
+</div>

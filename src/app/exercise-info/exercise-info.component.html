@@ -1,0 +1,23 @@
+
+<div *ngIf="exercise">
+
+  <h2 
+    class="exer-info"
+    id="exercise-title"
+  >
+    {{exercise.titles[0]}}
+  </h2>
+
+  <h3 class="exer-info" id="exercise-sets-reps">
+    {{exercise.setsReps[0]}}
+  </h3>
+  <p class="exer-info" id="partner-exercise">
+    {{exercise.partnerExercise}}</p>
+
+</div>
+
+<!-- the "0" index selection for the titles and setReps array will be replaced by "numOfRolls" -->
+<!-- 
+Need to add a info button next to exercise-title and partner-exercise
+when clicked > send exercise to exercise-details component
+exercise-details component > popout that will display step-by-step instructions, photos, and cues for each exercise -->
