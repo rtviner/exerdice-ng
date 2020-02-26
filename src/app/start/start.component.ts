@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'start-input',
-  templateUrl: './start-input.component.html',
-  styleUrls: ['./start-input.component.css']
+  selector: 'start',
+  templateUrl: './start.component.html',
+  styleUrls: ['./start.component.css']
 })
-export class StartInputComponent implements OnInit {
+export class StartComponent implements OnInit {
   numOfRounds = 6;
   isActive = true;
   nullError = false;

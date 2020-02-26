@@ -1,0 +1,47 @@
+<h2 class="how-to">How to Play</h2>
+<ul>
+  <li class="play-directions">Enter the number of rounds you would like to play below.</li>
+  <li>Click "Play" or press "Enter" to begin the game.</li>
+  <li>Once the game begins, click on the die or "Roll" or press "Enter" to roll the dice.</li>
+  <li>Each number on the die represents a different exercise.</li>
+  <li>Alternate between the main exercise and partner exercise to complete each round.</li>
+  <li>Warning: The exercise difficulty increases each time you roll a number previously rolled.</li>
+</ul>
+<form #form="ngForm">
+  <div class="formGroup">
+    <label for="numOfRounds">
+      Number of Rounds: (2-8)
+    </label>
+    <input
+
+      [(ngModel)]="numOfRounds"
+      name="numOfRounds"
+      id="numOfRounds"
+      type="number"
+      min="2"
+      max="8"
+      (change)="startGame()"
+    >
+    <!-- update so you can only click if rounds is correct -->
+    <!-- only take to game if numOfRounds is betwen min and max -->
+
+    <button 
+      class="button" 
+      [class.active]="isActive"
+      routerLink = "/game"
+    >
+      Play
+    </button>
+    <div 
+      class="alert"
+    >
+      <div [class.hidden]="!nullError">
+        Please choose the number of rounds to play.
+      </div>
+      <div [class.hidden]="!showError">
+        Please choose between 2 and 8 rounds.
+      </div>
+    </div>
+  </div>
+
+</form>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RoundInfoComponent } from './round-info.component';
+import { StartInputComponent } from './start.component';
 
-describe('RoundInfoComponent', () => {
-  let component: RoundInfoComponent;
-  let fixture: ComponentFixture<RoundInfoComponent>;
+describe('StartInputComponent', () => {
+  let component: StartInputComponent;
+  let fixture: ComponentFixture<StartInputComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RoundInfoComponent ]
+      declarations: [ StartInputComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RoundInfoComponent);
+    fixture = TestBed.createComponent(StartInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

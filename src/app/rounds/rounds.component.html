@@ -1,0 +1,20 @@
+
+<div *ngIf="roundService.rounds.length">
+  <h2>Rounds</h2>
+  <!-- show the boxes with round number in it and highlight as each round is completed -->
+  <!-- <ul class="round-num-boxes">
+    <li *ngFor="let num of roundNums; let i = index">
+      {{i + 1}}
+    </li>
+  </ul> -->
+
+  <ul class="rounds">
+    <li 
+      *ngFor="let round of roundService.rounds"
+      (click)="onSelect(round)"
+    >
+      {{round}}
+    </li>
+  </ul>
+
+</div>

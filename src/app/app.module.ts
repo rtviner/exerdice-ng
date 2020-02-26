@@ -4,18 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { StartInputComponent } from './start-input/start-input.component';
+import { StartComponent } from './start/start.component';
 import { DiceComponent } from './dice/dice.component';
-import { ExerciseInfoComponent } from './exercise-info/exercise-info.component';
-import { RoundInfoComponent } from './round-info/round-info.component';
+import { ExerciseComponent } from './exercise/exercise.component';
+import { RoundsComponent } from './rounds/rounds.component';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StartInputComponent,
     DiceComponent,
-    ExerciseInfoComponent,
-    RoundInfoComponent
+    ExerciseComponent,
+    GameComponent,
+    RoundsComponent,
+    StartComponent,
   ],
   imports: [
     BrowserModule,
