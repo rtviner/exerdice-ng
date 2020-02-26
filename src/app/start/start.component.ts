@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'start',
@@ -10,7 +11,7 @@ export class StartComponent implements OnInit {
   isActive = true;
   nullError = false;
   showError = false;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -20,6 +21,7 @@ export class StartComponent implements OnInit {
     this.nullError = !rounds;
     this.showError = (rounds && rounds < 2 || rounds > 8);
     if (!this.nullError && !this.showError) {
+      this.router.navigate(["/game"]); 
       // start game/ hide this input component and how to play component
       //show dice and roll button and rounds info off to the side
       console.log(rounds);

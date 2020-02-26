@@ -18,7 +18,7 @@
       name="numOfRounds"
       id="numOfRounds"
       type="number"
-      min="2"
+      min="2"               
       max="8"
       (change)="startGame()"
     >
@@ -28,7 +28,6 @@
     <button 
       class="button" 
       [class.active]="isActive"
-      routerLink = "/game"
     >
       Play
     </button>
