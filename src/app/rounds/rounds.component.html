@@ -1,10 +1,13 @@
 
-<div>
+<div class="rounds-info">
   <h2>Rounds</h2>
-  <!-- show the boxes with round number in it and highlight as each round is completed -->
-  <!-- roundService.totalRounds is not iterable use a pipe called range to transform into an array-->
+
   <ul class="round-num-boxes">
-    <li *ngFor="let num of roundService.totalRounds | range">
+    <li
+      *ngFor="let num of roundService.totalRounds | range"
+      class="round-num"
+      [class.current-round]="isCurrentRound(num)"
+    >
       {{ num }}
     </li>
   </ul>

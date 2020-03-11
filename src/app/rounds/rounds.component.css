@@ -1,0 +1,42 @@
+div.rounds-info {
+  grid-column-start: 2;
+  color: #8a91bf;
+  background-color: #050c79;
+  min-width: 174px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul.round-num-boxes {
+  display: inline-flex;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+li.round-num {
+  border: 1.5px solid #8a91bf;
+  border-radius: 5px;
+  padding: .25em;
+  margin: .07em;
+  font-size: 1.5em;
+}
+
+li.current-round {
+  color: #fff;
+  border: 1.5px solid #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: .25em;
+  margin: .07em;
+}
+
+ul.rounds {
+list-style-type: decimal;
+margin: 0 auto;
+padding-top: .5em;
+line-height: 1.45em;
+text-align: left;
+padding-left: 1.5em;
+font-size: 1em;
+}

@@ -9,14 +9,16 @@ import { RoundService } from '../round.service';
 })
 export class RoundsComponent implements OnInit {
   @Input() rounds: string[];
-  //also need to display the boxes with the numOfRounds and active round
-  // @Input() numOfRounds: number;
-
   
   constructor(public roundService: RoundService) { }
 
   ngOnInit() {
     
   }
+
+  isCurrentRound(roundNum: number){
+    return roundNum <= this.roundService.rounds.length;
+  };
+
 
 }
