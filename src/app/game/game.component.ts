@@ -12,9 +12,6 @@ import { RoundService } from '../round.service';
 export class GameComponent implements OnInit {
   dieNumber: number;
   currentExercise: Exercise;
-  //  need to get totRounds from start component
-  //  need to keep track of current round num
-    // roundService rounds.length?
   
   constructor(private exerciseService: ExerciseService, private roundService: RoundService) { }
 

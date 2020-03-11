@@ -16,7 +16,7 @@ export class StartComponent implements OnInit {
 
   ngOnInit() {
   }
-  // change to startGame method and start game instead of console.logging rounds
+
   startGame() {
     const rounds = this.numOfRounds;
     this.nullError = !rounds;
@@ -26,7 +26,6 @@ export class StartComponent implements OnInit {
     if (!this.nullError && !this.showError) {
       this.roundService.setTotalRounds(rounds);
       this.router.navigate(["/game"]); 
-      console.log(rounds);
     }
   }
 
