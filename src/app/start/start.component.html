@@ -13,21 +13,19 @@
       Number of Rounds: (2-8)
     </label>
     <input
-
       [(ngModel)]="numOfRounds"
       name="numOfRounds"
       id="numOfRounds"
       type="number"
       min="2"               
       max="8"
-      (change)="startGame()"
+      (keyup.enter)="startGame()"
     >
-    <!-- update so you can only click if rounds is correct -->
-    <!-- only take to game if numOfRounds is betwen min and max -->
 
     <button 
       class="button" 
       [class.active]="isActive"
+      (click)="startGame()"
     >
       Play
     </button>
