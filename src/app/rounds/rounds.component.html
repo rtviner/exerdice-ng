@@ -1,14 +1,15 @@
 
-<div *ngIf="roundService.rounds.length">
+<div>
   <h2>Rounds</h2>
   <!-- show the boxes with round number in it and highlight as each round is completed -->
-  <!-- <ul class="round-num-boxes">
-    <li *ngFor="let num of roundNums; let i = index">
-      {{i + 1}}
+  <!-- roundService.totalRounds is not iterable use a pipe called range to transform into an array-->
+  <ul class="round-num-boxes">
+    <li *ngFor="let num of roundService.totalRounds | range">
+      {{ num }}
     </li>
-  </ul> -->
-
-  <ul class="rounds">
+  </ul>
+  
+  <ul class="rounds" *ngIf="roundService.rounds.length">
     <li 
       *ngFor="let round of roundService.rounds"
       (click)="onSelect(round)"

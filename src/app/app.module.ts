@@ -9,6 +9,7 @@ import { DiceComponent } from './dice/dice.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { RoundsComponent } from './rounds/rounds.component';
 import { GameComponent } from './game/game.component';
+import { RangePipe } from './range.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { GameComponent } from './game/game.component';
     GameComponent,
     RoundsComponent,
     StartComponent,
+    RangePipe
   ],
   imports: [
     BrowserModule,
