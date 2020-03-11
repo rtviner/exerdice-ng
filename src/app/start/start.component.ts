@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, Router, RouterModule } from '@angular/router';
+import { RoundService } from '../round.service';
 
 @Component({
   selector: 'start',
@@ -11,7 +12,7 @@ export class StartComponent implements OnInit {
   isActive = true;
   nullError = false;
   showError = false;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private roundService: RoundService) { }
 
   ngOnInit() {
   }
@@ -20,10 +21,11 @@ export class StartComponent implements OnInit {
     const rounds = this.numOfRounds;
     this.nullError = !rounds;
     this.showError = (rounds && rounds < 2 || rounds > 8);
-    if (!this.nullError && !this.showError) {
-      this.router.navigate(["/game"]); 
-      // start game/ hide this input component and how to play component
+     // start game/ hide this input component and how to play component
       //show dice and roll button and rounds info off to the side
+    if (!this.nullError && !this.showError) {
+      this.roundService.setTotalRounds(rounds);
+      this.router.navigate(["/game"]); 
       console.log(rounds);
     }
   }
