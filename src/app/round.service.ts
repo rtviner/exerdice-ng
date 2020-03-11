@@ -10,6 +10,9 @@ export class RoundService {
   setTotalRounds(numOfRounds: number) {
     this.totalRounds = numOfRounds;
   }
+  getRoundNumber() {
+    return this.rounds.length;
+  }
 
   add(round: string) {
       this.rounds.push(round);

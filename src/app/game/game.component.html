@@ -1,3 +1,8 @@
-<dice (click)="onPlay()" [dieNumber]="dieNumber"></dice>
+<dice 
+  (click)="onPlay()"
+  [dieNumber]="dieNumber"
+  [class.hidden]="roundsComplete"
+>
+</dice>
 <exercise [exercise]="currentExercise"></exercise>
 <rounds ></rounds>
