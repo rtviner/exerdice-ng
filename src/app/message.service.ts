@@ -16,7 +16,7 @@ export class MessageService {
   }
 
   getEncouragement(): Observable<Encouragement> {
-    let number = Math.floor(Math.random() * 6);
+    let number = Math.floor(Math.random() * ENCOURAGEMENTS.length) +1;
     return of (ENCOURAGEMENTS.find(encouragement => encouragement.id === number));
   }
 }

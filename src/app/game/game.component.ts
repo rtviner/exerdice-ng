@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Exercise } from '../exercise';
 import { ExerciseService } from '../exercise.service';
@@ -15,13 +16,10 @@ export class GameComponent implements OnInit {
   roundNumber: number;
   roundsComplete = false;
 
-  constructor(private exerciseService: ExerciseService, private roundService: RoundService) { }
+  constructor(private router: Router, private exerciseService: ExerciseService, private roundService: RoundService) { }
   
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
- // need to use roundService to setCompletion
   getExercise(exNumber: number): void {
     this.exerciseService.getExercise(exNumber)
       .subscribe(exercise => this.currentExercise = exercise);
@@ -38,6 +36,18 @@ export class GameComponent implements OnInit {
       this.getExercise(this.dieNumber);
       this.roundService.add(this.currentExercise.titles[0]);
     }; 
+  }
+  // call roundService.clear to delete all round info
+    //also need to clear currentExercise
+  resetGame() {
+    this.currentExercise = null;
+    this.roundsComplete = false;
+    this.roundService.clear();
+  }
+  //reset game and route back to start
+  newGame() {
+    this.resetGame();
+    this.router.navigate(["/start"]); 
   }
 
 }
