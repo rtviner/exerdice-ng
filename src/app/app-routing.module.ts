@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { GameComponent } from './game/game.component';
 import { StartComponent } from './start/start.component';
 
-
 const routes: Routes = [
   { path: 'game', component: GameComponent },
   { path: 'start', component: StartComponent },

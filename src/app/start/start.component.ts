@@ -21,8 +21,7 @@ export class StartComponent implements OnInit {
     const rounds = this.numOfRounds;
     this.nullError = !rounds;
     this.showError = (rounds && rounds < 2 || rounds > 8);
-     // start game/ hide this input component and how to play component
-      //show dice and roll button and rounds info off to the side
+
     if (!this.nullError && !this.showError) {
       this.roundService.setTotalRounds(rounds);
       this.router.navigate(["/game"]); 

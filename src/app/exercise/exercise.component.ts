@@ -16,14 +16,4 @@ export class ExerciseComponent {
   ngOnInit() {
 
   }
-  
-  //needs input number to get exercise?
-  // getExercise(): void {
-  //   //get exercise by die number
-  //   // let exNumber = ;
-  //   this.exerciseService.getExercise(this.exNumber)
-  //     .subscribe(exercise => this.exercise = exercise);
-  // }
-  
-
 }
