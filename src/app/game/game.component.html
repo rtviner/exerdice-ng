@@ -4,5 +4,6 @@
   [class.hidden]="roundsComplete"
 >
 </dice>
+<last-round-message *ngIf="roundsComplete"></last-round-message>
 <exercise [exercise]="currentExercise"></exercise>
 <rounds ></rounds>

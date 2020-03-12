@@ -10,6 +10,7 @@ import { ExerciseComponent } from './exercise/exercise.component';
 import { RoundsComponent } from './rounds/rounds.component';
 import { GameComponent } from './game/game.component';
 import { RangePipe } from './range.pipe';
+import { LastRoundMessageComponent } from './last-round-message/last-round-message.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RangePipe } from './range.pipe';
     GameComponent,
     RoundsComponent,
     StartComponent,
-    RangePipe
+    RangePipe,
+    LastRoundMessageComponent
   ],
   imports: [
     BrowserModule,

@@ -29,7 +29,7 @@ export class GameComponent implements OnInit {
 
   onPlay() { 
     this.roundNumber = this.roundService.getRoundNumber();
-    // want to show a message like "finish up strong" in place of dice if we are on the last round
+ 
     if (this.roundNumber === this.roundService.totalRounds -1) {
       this.roundsComplete = true;
     };
