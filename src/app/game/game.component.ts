@@ -17,8 +17,10 @@ export class GameComponent implements OnInit {
   roundsComplete = false;
 
   constructor(private router: Router, private exerciseService: ExerciseService, private roundService: RoundService) { }
-  
-  ngOnInit() {}
+
+  ngOnInit() {
+    this.resetGame();
+  }
 
   getExercise(exNumber: number): void {
     this.exerciseService.getExercise(exNumber)
@@ -37,14 +39,13 @@ export class GameComponent implements OnInit {
       this.roundService.add(this.currentExercise.titles[0]);
     }; 
   }
-  // call roundService.clear to delete all round info
-    //also need to clear currentExercise
+
   resetGame() {
     this.currentExercise = null;
     this.roundsComplete = false;
     this.roundService.clear();
   }
-  //reset game and route back to start
+  
   newGame() {
     this.resetGame();
     this.router.navigate(["/start"]); 
