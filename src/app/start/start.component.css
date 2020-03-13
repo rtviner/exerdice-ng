@@ -1,9 +1,50 @@
-button.active {
-  /* can be pushed bright, shadows */
-  color: white;
-  background-color: rebeccapurple;
-}
 
 .hidden {
   display: none
+}
+
+h2.how-to {
+	color: #fff;
+	margin: .5em auto .25em;
+}
+
+ol.directions {
+	max-width: 30em;
+	margin: 0 auto;
+	padding: 1em;
+	line-height: 1.25em;
+	text-align: justify;
+}
+
+h3 {
+	color: #FF9800;
+	margin: 0 auto;
+	padding: .25em;
+}
+
+p.warning {
+	max-width: 30em;
+	text-align: justify;
+	margin: 0 auto .5em;
+	padding: .25em
+}
+
+label {
+	color: #FF9800;
+	padding: .25em;
+}
+
+#numOfRounds {
+	color: #040869;
+	width: auto;
+  font-size: 1em;
+	margin: .25em auto;
+	padding: .1em .25em;
+	border-radius: 5px;
+}
+
+button.play-btn {
+	width: 3em;
+	height: auto;
+	margin: auto .5em;
 }
