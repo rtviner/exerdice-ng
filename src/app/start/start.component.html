@@ -1,12 +1,12 @@
 <h2 class="how-to">How to Play</h2>
-<ul>
+<ol class="directions">
   <li class="play-directions">Enter the number of rounds you would like to play below.</li>
   <li>Click "Play" or press "Enter" to begin the game.</li>
   <li>Once the game begins, click on the die or "Roll" or press "Enter" to roll the dice.</li>
-  <li>Each number on the die represents a different exercise.</li>
   <li>Alternate between the main exercise and partner exercise to complete each round.</li>
-  <li>Warning: The exercise difficulty increases each time you roll a number previously rolled.</li>
-</ul>
+</ol>
+<h3 class="warning">Warning:</h3>
+<p class="warning"> The difficulty of the exercise increases each time you roll a number previously rolled.</p>
 <form #form="ngForm">
   <div class="formGroup">
     <label for="numOfRounds">
@@ -23,7 +23,7 @@
     >
 
     <button 
-      class="button" 
+      class="button play-btn" 
       [class.active]="isActive"
       (click)="startGame()"
     >

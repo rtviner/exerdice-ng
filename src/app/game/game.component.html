@@ -1,11 +1,31 @@
-<dice 
-  (click)="onPlay()"
-  [dieNumber]="dieNumber"
-  [class.hidden]="roundsComplete"
->
-</dice>
-<last-round-message *ngIf="roundsComplete"></last-round-message>
-<exercise [exercise]="currentExercise"></exercise>
-<rounds ></rounds>
-<button (click)="resetGame()">Reset</button>
-<button (click)="newGame()">New Game</button>
+<div class="game-grid">
+  <div class="col-1 row-1">
+    <dice 
+      (click)="onPlay()"
+      [dieNumber]="dieNumber"
+      [class.hidden]="roundsComplete"
+    >
+    </dice>
+    <last-round-message *ngIf="roundsComplete"></last-round-message>
+    <exercise [exercise]="currentExercise"></exercise>
+  </div>
+  
+  <div class="col-2 row-1">
+    <rounds ></rounds>
+  </div>
+
+  <div class="bottom-controls bottom-row">
+    <button 
+      class="button control-btn"
+      (click)="resetGame()"
+    >
+      Reset
+    </button>
+    <button 
+      class="button control-btn"
+      (click)="newGame()"
+    >
+      New Game
+    </button>
+  </div>
+</div>

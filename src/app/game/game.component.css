@@ -1,3 +1,68 @@
-.hidden {
+ .hidden {
   display: none;
+}
+
+/* new column 1/main colors
+	background-color: #040869
+  color: #a6aae6;
+  all exercise color: #FF9800
+new column 2 colors
+  background-color: #050c79
+  color: #7378c3;
+  current-round color: #fff
+new button colors
+  color: #040869
+  background-color: #FF9800
+  box-shadow color: #dc8300
+  grow size of button when hovered/active? */
+
+
+.game-grid {
+	display: grid;
+	height: 87vh;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: 85% 15%;
+	grid-column-gap: 0;
+	justify-items: center;
+	align-items: center;
+	/* align-content: stretch; */
+}
+
+div.col-1 {
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 1;
+	border-right: 0;
+	min-width: 319px;
+	height: auto;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+div.col-2 {
+	grid-column: 2 / span 2;
+	grid-row: 1 / span 1;
+	color: #626ca7;
+	background-color: #050c79;
+	min-width: 174px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: stretch;
+}
+
+/* add style for buttons at the bottom */
+div.bottom-controls {
+	width: 100%;
+	margin: 0 auto;
+	grid-column: 1 / span 2;
+	grid-row: 2 / span 1;
+}
+
+button.control-btn {
+	width: 10em;
+  margin: 0 1em;
+  height: 1.75em;
 }

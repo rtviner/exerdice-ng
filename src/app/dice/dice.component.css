@@ -1,6 +1,67 @@
+#roll-btn {
+	width: 5em;
+	height: 1.75em;
+	box-shadow: -1px 2.25px 1px #dc8300;
+	margin: .75em auto;
+}
+
 #die {
 	background-image:url('../../assets/images/6-sided-dice.svg.med.png');
     height:49px;
     width:49px;
     margin: 0 auto .25em;
 }
+
+.dice_rolling {
+	-webkit-animation: diceroll .8s steps(5) 3;
+  	-moz-animation: diceroll .8s steps(5) 3;
+  	-ms-animation: diceroll .8s steps(5) 3;
+  	-o-animation: diceroll .8s steps(5) 3;
+	animation: diceroll .8s steps(5) 3;
+}
+
+@-webkit-keyframes diceroll {
+	100% { background-position: -251px; }
+}
+
+@-moz-keyframes diceroll {
+	100% { background-position: -251px; }
+}
+
+@-ms-keyframes diceroll {
+	100% { background-position: -251px; }
+}
+
+@-o-keyframes diceroll {
+	100% { background-position: -251px; }
+}
+
+@keyframes diceroll {
+	100% { background-position: -251px; }
+}
+
+/*Flip through different classes to roll dice and then settle on 1 class that corresponds to the roll number*/
+.dice_1 {
+    background-position:0px 0px;
+
+}
+
+.dice_2 {
+    background-position:-50px 0px;
+}
+
+.dice_3 {
+    background-position:-100px 0px;
+}
+
+.dice_4 {
+    background-position:-151px 0px;
+}
+.dice_5 {
+    background-position:-201px 0px;
+}
+
+.dice_6 {
+    background-position:-251px 0px;
+}
+
