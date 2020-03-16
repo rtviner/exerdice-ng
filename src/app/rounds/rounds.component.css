@@ -1,28 +1,24 @@
-/* h2#title-col-2 {
-	margin: .75em auto 0 auto;
+h2.title.col-2 {
+	margin: 1.5em auto 0 auto;
 	font: 1.75em 'Bowlby One SC', arial;
 	min-height: 49px;
-	color: #a199cc;
-} */
-
+	color: #a6aae6;
+}
 
 div.rounds-info {
   grid-column-start: 2;
   color: #8a91bf;
   background-color: #050c79;
   min-width: 174px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 ul.round-num-boxes {
-  display: inline-flex;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
 }
 li.round-num {
+  display: inline-block;
   border: 1.5px solid #8a91bf;
   border-radius: 5px;
   padding: .25em;
@@ -39,12 +35,12 @@ li.current-round {
   margin: .07em;
 }
 
-ul.rounds {
-list-style-type: decimal;
-margin: 0 auto;
-padding-top: .5em;
-line-height: 1.45em;
-text-align: left;
-padding-left: 1.5em;
-font-size: 1em;
+ol.rounds {
+  text-align: left;
 }
+
+li.round-info {
+  padding-left: .5em;
+  line-height: 1.75;
+}
+

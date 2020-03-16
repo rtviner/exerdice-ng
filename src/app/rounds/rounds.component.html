@@ -1,6 +1,6 @@
 
 <div class="rounds-info">
-  <h2>Rounds</h2>
+  <h2 class="title col-2">Rounds</h2>
 
   <ul class="round-num-boxes">
     <li
@@ -12,13 +12,14 @@
     </li>
   </ul>
   
-  <ul class="rounds" *ngIf="roundService.rounds.length">
+  <ol class="rounds" *ngIf="roundService.rounds.length">
     <li 
+      class="round-info"
       *ngFor="let round of roundService.rounds"
       (click)="onSelect(round)"
     >
       {{round}}
     </li>
-  </ul>
+  </ol>
 
 </div>
