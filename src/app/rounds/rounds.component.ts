@@ -13,7 +13,7 @@ export class RoundsComponent implements OnInit {
   constructor(public roundService: RoundService) { }
 
   ngOnInit() {
-    
+
   }
 
   isCurrentRound(roundNum: number){
