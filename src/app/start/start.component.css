@@ -12,8 +12,11 @@ ol.directions {
 	max-width: 30em;
 	margin: 0 auto;
 	padding: 1em;
-	line-height: 1.25em;
 	text-align: justify;
+}
+
+li.play-directions, p.warning {
+	line-height: 1.75;
 }
 
 h3 {
