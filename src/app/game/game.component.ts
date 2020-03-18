@@ -11,7 +11,7 @@ import { RoundService } from '../round.service';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  dieNumber: number;
+  diceClass: string;
   currentExercise: Exercise;
   roundNumber: number;
   roundsComplete = false;
@@ -27,15 +27,17 @@ export class GameComponent implements OnInit {
       .subscribe(exercise => this.currentExercise = exercise);
   }
 
-  onPlay() { 
+   onPlay() { 
     this.roundNumber = this.roundService.getRoundNumber();
  
     if (this.roundNumber === this.roundService.totalRounds -1) {
       this.roundsComplete = true;
     };
+
     if (this.roundNumber < this.roundService.totalRounds) {
-      this.dieNumber = Math.floor(Math.random() * 6) +1;
-      this.getExercise(this.dieNumber);
+      let dieNumber = Math.floor(Math.random() * 6) +1;
+      this.diceClass = `dice_${dieNumber}`;
+      this.getExercise(dieNumber);
       this.roundService.add(this.currentExercise.titles[0]);
     }; 
   }
