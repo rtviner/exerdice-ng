@@ -1,14 +1,21 @@
 
 <div class="exercise-card" *ngIf="exercise">
- <h2 class="heading">Alternate</h2>
+
+  <h2 class="heading">Exercises per Set</h2>
 
   <ol class="exer-info">
-    <li class=" exer-info exercise ex-1">{{exercise.titles[0]}}</li>
+    <li class=" exer-info exercise ex-1">{{exercise.titles[index]}}</li>
     <li class="exer-info exercise ex-2">{{exercise.partnerExercise}}</li>
   </ol>
 
-  <h2 class="heading">Sets/Reps</h2>
-  <p class=" exer-info sets-reps">{{exercise.setsReps[0]}}</p>
+  <h2 class="heading">Sets and Reps</h2>
+
+  <p class=" exer-info sets-reps">{{exercise.setsReps[index]}}</p>
+ 
+ 
+
+
+
 
 </div>
 
