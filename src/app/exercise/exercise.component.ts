@@ -9,6 +9,7 @@ import { Exercise } from '../exercise';
 })
 export class ExerciseComponent {
   @Input() exercise: Exercise;
+  @Input() index: number;
   
 
   constructor() {}
