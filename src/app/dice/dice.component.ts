@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
+import { trigger, style, animate, transition, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'dice',
@@ -43,7 +43,7 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
     ]),
     trigger("blockInitialAnimation", [
       transition( ":enter", [])
-    ])
+    ]),
   ]
 })
 
