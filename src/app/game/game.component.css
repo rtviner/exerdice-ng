@@ -1,21 +1,4 @@
- .hidden {
-  display: none;
-}
-
-/* new column 1/main colors
-	background-color: #040869
-  color: #a6aae6;
-  all exercise color: #FF9800
-new column 2 colors
-  background-color: #050c79
-  color: #7378c3;
-  current-round color: #fff
-new button colors
-  color: #040869
-  background-color: #FF9800
-  box-shadow color: #dc8300
-  grow size of button when hovered/active? */
-
+/*  grow size of button when hovered/active? */
 
 .game-grid {
 	display: grid;
