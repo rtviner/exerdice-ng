@@ -42,5 +42,6 @@ ol.rounds {
 li.round-info {
   padding-left: .5em;
   line-height: 1.75;
+  max-width: 12em;
 }
 
