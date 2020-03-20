@@ -9,7 +9,11 @@
     <last-round-message *ngIf="roundsComplete"></last-round-message>
   </div>
   <div class="col-1 row-2">
-    <exercise [exercise]="currentExercise"></exercise>
+    <exercise 
+      [exercise]="currentExercise"
+      [index]="currentIndex"
+    >
+    </exercise>
   </div>
   
   <div class="col-2 row-1-2">
