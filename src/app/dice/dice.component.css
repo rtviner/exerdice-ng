@@ -1,8 +1,11 @@
-#roll-btn {
+.roll-btn {
 	width: 5em;
 	height: 1.75em;
 	box-shadow: -1px 2.25px 1px #dc8300;
 	margin: .75em auto;
+}
+.hidden {
+    display: none;
 }
 
 #die {

@@ -49,6 +49,7 @@ import { trigger, style, animate, transition, keyframes } from '@angular/animati
 
 export class DiceComponent implements OnInit {
   @Input() diceClass: string;
+  @Input() hideDice: boolean;
 
   constructor() {
 
