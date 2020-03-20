@@ -9,7 +9,6 @@ div.rounds-info {
   grid-column-start: 2;
   color: #8a91bf;
   background-color: #050c79;
-  min-width: 174px;
 }
 
 ul.round-num-boxes {
@@ -40,8 +39,9 @@ ol.rounds {
 }
 
 li.round-info {
-  padding-left: .5em;
+  padding: 0 .5em;
   line-height: 1.75;
   max-width: 12em;
+  min-width: 10em;
 }
 
