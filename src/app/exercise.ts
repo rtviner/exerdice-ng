@@ -6,5 +6,4 @@ export interface Exercise {
   partnerExercise: string;
   setsReps: string[];
   tips: string[];
-  rolls: number;
 }
