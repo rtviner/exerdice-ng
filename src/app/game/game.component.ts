@@ -23,7 +23,7 @@ export class GameComponent implements OnInit {
   ngOnInit() {
     this.resetGame();
   }
-  
+
   rollDie() {
     let dieNumber = Math.floor(Math.random() * 6) +1;
     this.diceClass = `dice_${dieNumber}`;
@@ -46,7 +46,7 @@ export class GameComponent implements OnInit {
 
   onPlay() { 
     let currentRound = 
-      this.roundService.getRoundNumber() + 1;
+      this.roundService.getRoundNumber();
  
     if (currentRound <= this.roundService.totalRounds) {
       let dieNumber = this.rollDie();
