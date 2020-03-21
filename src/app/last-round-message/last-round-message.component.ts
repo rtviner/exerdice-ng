@@ -1,11 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
+
+import { zoomIn } from '../animations';
 import { Encouragement } from '../encouragement';
 import { MessageService } from '../message.service';
 
 @Component({
   selector: 'last-round-message',
   templateUrl: './last-round-message.component.html',
-  styleUrls: ['./last-round-message.component.css']
+  styleUrls: ['./last-round-message.component.css'],
+  animations: [ zoomIn ]
 })
 export class LastRoundMessageComponent implements OnInit {
   encouragement: Encouragement;
