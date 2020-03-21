@@ -42,25 +42,28 @@ div.col-2 {
 div.bottom-controls {
 	width: 100%;
 	margin: 0 auto;
-	grid-column: 1 / span 1;
+	grid-column: 1 / span 3;
 	grid-row: 3 / span 1;
 }
 
 button.control-btn {
-	width: 20%;
-	min-width: 10em;
-	margin: 0 1em;
-	height: 2.25em;
+	width: 50%;
+	margin: 0;
+	border: 1.5px solid #fff;
+	border-radius: 0;
 }
 
-@media only screen and (max-device-width: 580px) {
+@media only screen and (min-device-width: 580px) {
 	div.bottom-controls {
-		grid-column: 1 / span 3;
+		grid-column: 1 / span 1;
 	}
+
 	button.control-btn {
-		width: 50%;
-    margin: 0;
-    border: 1.5px solid #fff;
-    border-radius: 0;
+		width: 20%;
+		min-width: 10em;
+		margin: 0 1em;
+		height: 2.25em;
+		border: 1px solid #fff;
+		border-radius: 10px;
 	}
 }
