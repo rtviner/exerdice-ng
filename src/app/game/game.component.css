@@ -42,12 +42,25 @@ div.col-2 {
 div.bottom-controls {
 	width: 100%;
 	margin: 0 auto;
-	grid-column: 1 / span 2;
+	grid-column: 1 / span 1;
 	grid-row: 3 / span 1;
 }
 
 button.control-btn {
-	width: 10em;
-  margin: 0 1em;
-  height: 1.75em;
+	width: 20%;
+	min-width: 10em;
+	margin: 0 1em;
+	height: 2.25em;
+}
+
+@media only screen and (max-device-width: 580px) {
+	div.bottom-controls {
+		grid-column: 1 / span 3;
+	}
+	button.control-btn {
+		width: 50%;
+    margin: 0;
+    border: 1.5px solid #fff;
+    border-radius: 0;
+	}
 }
