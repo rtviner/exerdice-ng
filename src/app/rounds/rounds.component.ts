@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { RoundService } from '../round.service';
-import { pulse, zoomIn } from './rounds.component.animations'
+import { pulse } from './rounds.component.animations';
+import { zoomIn } from '../../app/animations';
 
 @Component({
   selector: 'rounds',

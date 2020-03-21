@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { diceWobble, blockInitialAnimation } from './dice.component.animations'
+import { diceWobble } from './dice.component.animations'
+import { blockInitialAnimation } from '../animations';
 
 @Component({
   selector: 'dice',

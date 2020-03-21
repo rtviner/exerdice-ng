@@ -38,9 +38,4 @@ export const diceWobble = trigger('wobble', [
   )
 ]);
 
-export const blockInitialAnimation = trigger ("blockInitialAnimation", 
-  [
-    transition( ":enter", [])
-  ]
-);
 
