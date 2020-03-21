@@ -26,7 +26,9 @@ export class GameComponent implements OnInit {
 
   rollDie() {
     let dieNumber = Math.floor(Math.random() * 6) +1;
-    this.diceClass = `dice_${dieNumber}`;
+    // if dieNumber === last dieNumber add "again" to dieClass to trigger wobble animation
+    this.diceClass = 
+      (this.diceClass === `dice_${dieNumber}`) ? `dice_${dieNumber} again`: `dice_${dieNumber}`;
     let rollFreq = this.rolls.get(dieNumber);
     //increment roll freq for dieNumber if less than 3 bc there are only 3 variations for each exercise
     if (rollFreq && rollFreq < 3) {
