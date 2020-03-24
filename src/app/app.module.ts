@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,16 +19,17 @@ import { LastRoundMessageComponent } from './last-round-message/last-round-messa
     DiceComponent,
     ExerciseComponent,
     GameComponent,
+    LastRoundMessageComponent,
+    RangePipe,
     RoundsComponent,
     StartComponent,
-    RangePipe,
-    LastRoundMessageComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
