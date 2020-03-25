@@ -43,19 +43,21 @@ export class GameComponent implements OnInit {
 
   getExercise(exNumber: number): void {
     this.exerciseService.getExercise(exNumber)
-      .subscribe(exercise => this.currentExercise = exercise);
+      .subscribe(exercise => {
+        this.currentExercise = exercise;
+        this.roundService.add(exercise.titles[this.currentIndex]);
+      });
   }
 
-  onPlay() { 
+  onPlay() {    
     let currentRound = 
       this.roundService.getCurrentRoundNumber();
  
     if (currentRound <= this.roundService.totalRounds) {
       let dieNumber = this.rollDie();
-      this.getExercise(dieNumber);
-      
       this.currentIndex = this.rolls.get(dieNumber) - 1 || 0;
-      this.roundService.add(this.currentExercise.titles[this.currentIndex]);
+
+      this.getExercise(dieNumber)      
     }; 
     
     if (currentRound === this.roundService.totalRounds) {
