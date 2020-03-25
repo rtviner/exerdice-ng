@@ -1,22 +1,42 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 import { Encouragement } from './encouragement';
-import { ENCOURAGEMENTS } from './mock-encouragements';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class MessageService {
+  length: number;
+  
+  private encouragementsUrl = 'https://exerdice-backend.herokuapp.com/api/encouragements';
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  getEncouragements(): Observable<Encouragement[]> {
-    return of (ENCOURAGEMENTS);
+  private handleError<T> (operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    };
   }
 
+  getEncouragements(): Observable<Encouragement[]> {
+    return this.http.get<Encouragement[]>(this.encouragementsUrl)
+      .pipe(
+        catchError(this.handleError<Encouragement[]>('getEncouragements',
+        []))
+      );
+  }
+
+  //this needs to be changed to getRandomEncouragement server side instead of using random number down here.
   getEncouragement(): Observable<Encouragement> {
-    let number = Math.floor(Math.random() * ENCOURAGEMENTS.length) +1;
-    return of (ENCOURAGEMENTS.find(encouragement => encouragement.id === number));
+    let number = Math.floor(Math.random() * 9) +1;
+    const url = `${this.encouragementsUrl}/${number}`;
+    return this.http.get<Encouragement>(url).pipe(
+      catchError(this.handleError<Encouragement>(`getEncouragement id=${number}`))
+    );
   }
 }
