@@ -32,11 +32,11 @@ export class MessageService {
   }
 
   //this needs to be changed to getRandomEncouragement server side instead of using random number down here.
-  getEncouragement(): Observable<Encouragement> {
-    let number = Math.floor(Math.random() * 9) +1;
-    const url = `${this.encouragementsUrl}/${number}`;
+  getRandomEncouragement(): Observable<Encouragement> {
+    
+    const url = `${this.encouragementsUrl}/random`;
     return this.http.get<Encouragement>(url).pipe(
-      catchError(this.handleError<Encouragement>(`getEncouragement id=${number}`))
+      catchError(this.handleError<Encouragement>('getRandomEncouragement'))
     );
   }
 }

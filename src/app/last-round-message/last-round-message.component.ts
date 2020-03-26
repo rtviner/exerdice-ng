@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { zoomIn } from '../animations';
 import { Encouragement } from '../encouragement';
@@ -20,7 +20,7 @@ export class LastRoundMessageComponent implements OnInit {
   }
   
   getEncouragement(): void{
-    this.messageService.getEncouragement()
+    this.messageService.getRandomEncouragement()
       .subscribe(encouragement => this.encouragement = encouragement);
   }
 
