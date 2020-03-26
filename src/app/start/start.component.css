@@ -6,17 +6,20 @@
 h2.how-to {
 	color: #fff;
 	margin: .5em auto .25em;
+	font-size: 1.2em;
 }
 
 ol.directions {
+	font-size: 1em;
 	max-width: 30em;
 	margin: 0 auto;
-	padding: 1em;
+	padding-top: .25em;
 	text-align: justify;
 }
 
 li.play-directions, p.warning {
-	line-height: 1.75;
+	line-height: 1.5;
+	margin: 0 .5em;
 }
 
 h3 {
@@ -24,10 +27,11 @@ h3 {
 	margin: 0 auto;
 	width: 100%;
 	padding: .25em;
+	font-size: 1.1em;
 }
 
 p.warning {
-	max-width: 30em;
+	max-width: 20em;
 	text-align: justify;
 	margin: 0 auto .5em;
 	padding: .25em
@@ -36,11 +40,12 @@ p.warning {
 label {
 	color: #FF9800;
 	padding: .25em;
+	font-size: 1em;
 }
 
 #numOfRounds {
 	color: #040869;
-	width: auto;
+	width: 2em;
   font-size: 1em;
 	margin: .25em auto;
 	padding: .1em .25em;
@@ -51,4 +56,27 @@ button.play-btn {
 	width: 3em;
 	height: auto;
 	margin: auto .5em;
+}
+
+@media only screen and (min-height: 440px) and  (min-width: 320px) {
+	h2.how-to {
+		font-size: 1.75em;
+	}
+
+	ol.directions {
+		padding-top: .5em;
+	}
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+	p.warning {
+		max-width: 30em;
+	}
+
+	li.play-directions, p.warning {
+		line-height: 1.75;
+	}
+
 }

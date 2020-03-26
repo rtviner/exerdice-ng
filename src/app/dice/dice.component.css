@@ -1,8 +1,10 @@
 .roll-btn {
 	width: 5em;
-	height: 1.75em;
+    height: 1.75em;
+    border: 1px solid #c77f14;
 	box-shadow: -1px 2.25px 1px #dc8300;
-	margin: .75em auto;
+    margin: .75em auto;
+    font-size: 1em;
 }
 .hidden {
     display: none;

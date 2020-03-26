@@ -1,4 +1,11 @@
 h2 {
   color: #FF9800;
   margin: .5em auto;
+  font-size: 1.2em;
+}
+
+@media only screen and (min-height: 815px) {
+  h2 {
+    font-size: 1.75em;
+  }
 }

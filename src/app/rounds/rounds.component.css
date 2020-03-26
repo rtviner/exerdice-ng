@@ -1,5 +1,5 @@
 h2.title.col-2 {
-	margin: 1.5em auto 0 auto;
+	margin: 0;
 	font: 1.75em 'Bowlby One SC', arial;
 	min-height: 49px;
 	color: #a6aae6;
@@ -9,6 +9,7 @@ div.rounds-info {
   grid-column-start: 2;
   color: #8a91bf;
   background-color: #050c79;
+  font-size: 1em;
 }
 
 ul.round-num-boxes {
@@ -22,13 +23,12 @@ li.round-num {
   border-radius: 5px;
   padding: .25em;
   margin: .07em;
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 
 li.current-round {
   color: #fff;
   border: 1.5px solid #fff;
-  font-weight: bold;
   border-radius: 5px;
   padding: .25em;
   margin: .07em;
@@ -40,8 +40,24 @@ ol.rounds {
 
 li.round-info {
   padding: 0 .5em;
-  line-height: 1.75;
+  line-height: 1.5;
   max-width: 12em;
   min-width: 10em;
 }
 
+@media only screen and (min-height: 815px) {
+  
+  h2.title.col-2 {
+    margin: 1.5em auto 0 auto;
+  }
+
+  li.round-num {
+    font-size: 1.5em;
+  }
+
+  li.round-info {
+    line-height: 1.75;
+    font-size: 1.25em;
+  }
+
+}

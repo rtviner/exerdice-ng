@@ -1,13 +1,27 @@
-
-h1#title {
-  font: 2em 'Bowlby One SC', arial;
-	margin: 0 auto;
-	margin-left: 1em;
-	text-align: justify;
-	padding: .5em;
+.body {
+	box-sizing: border-box;
+	height: 100vh;
+	width: 100vw;
+	min-height: 568px;
+}
+.top-row {
+	height: 5vh;
 	width: 100%;
-	height: 9vh;
+	text-align: justify;
+	margin: 0;
+	display: none;
 }
 
+h1.title {
+  font: 1.5em 'Bowlby One SC', arial;
+	margin: 0;
+	margin-left: 1em;
+	padding: .5em;
+}
 
+@media only screen and (min-height: 815px) {
+	.top-row {
+		display: block;
+	}
+}
 
