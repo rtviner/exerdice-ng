@@ -17,7 +17,7 @@ export class RoundsComponent implements OnInit {
 
   ngOnInit() {
 
-  }
+}
 
   isCurrentRound(roundNum: number){
     return roundNum <= this.roundService.rounds.length;
