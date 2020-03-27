@@ -34,7 +34,7 @@ div.col-2 {
 	color: #626ca7;
 	background-color: #050c79;
 	width: auto;
-	min-width: 200px;
+	min-width: 16em;
 	height: 100%;
 }
 
@@ -74,5 +74,9 @@ button.control-btn {
 		height: 95%;
 		min-height: 560px;
 		grid-template-rows: 30% 65% 5%;
+	}
+
+	div.col-2 {
+		min-width: 20em;
 	}
 }

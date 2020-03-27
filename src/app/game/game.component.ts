@@ -46,7 +46,7 @@ export class GameComponent implements OnInit {
       .subscribe(exercise => {
         this.currentIndex = this.rolls.get(exNumber) - 1 || 0;
         this.currentExercise = exercise;
-        this.roundService.add(exercise.titles[this.currentIndex]);
+        this.roundService.add(`${exercise.titles[this.currentIndex]} #${exNumber}`);
       });
   }
 
