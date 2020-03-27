@@ -57,7 +57,7 @@ li.round-info {
   li.round-info {
     line-height: 1.75;
     font-size: 1.25em;
-    min-width: 12em;
+    max-width: 13em;
   }
 
 }
