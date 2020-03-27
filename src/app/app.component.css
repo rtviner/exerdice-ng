@@ -1,11 +1,11 @@
 .body {
 	box-sizing: border-box;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	min-height: 568px;
 }
 .top-row {
-	height: 5vh;
+	height: 5%;
 	width: 100%;
 	text-align: justify;
 	margin: 0;

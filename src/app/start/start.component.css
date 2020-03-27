@@ -11,7 +11,7 @@ h2.how-to {
 
 ol.directions {
 	font-size: 1em;
-	max-width: 30em;
+	max-width: 20em;
 	margin: 0 auto;
 	padding-top: .25em;
 	text-align: justify;
@@ -53,12 +53,12 @@ label {
 }
 
 button.play-btn {
-	width: 3em;
-	height: auto;
+	width: 6em;
+	height: 1.75em;
 	margin: auto .5em;
 }
 
-@media only screen and (min-height: 440px) and  (min-width: 320px) {
+@media only screen and (min-height: 440px) {
 	h2.how-to {
 		font-size: 1.75em;
 	}
@@ -71,12 +71,14 @@ button.play-btn {
 		font-size: 1.5em;
 	}
 
-	p.warning {
-		max-width: 30em;
-	}
-
 	li.play-directions, p.warning {
 		line-height: 1.75;
 	}
 
+}
+
+@media only screen and  (min-width: 378px) {
+	ol.directions, p.warning {
+		max-width: 30em;
+	}
 }
